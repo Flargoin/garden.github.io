@@ -486,9 +486,10 @@ line-height: 32px;
     }
     .header__promo-inst {
         position: absolute;
-        left: -95px;
-        top: 65px;
+        left: 0px;
+        top: 111px;
         z-index: 2;
+        width: 290px;
     }
     .header__promo-shadow {
         position: absolute;
@@ -498,15 +499,28 @@ line-height: 32px;
     }
     .header__promo-recommendation {
         position: absolute;
-        bottom: -220%;
-        right: 20%;
+        bottom: -99%;
+        right: 5%;
+        width: 80px;
     }
     .header__promo-sale {
+    
         position: absolute;
-        top: 265%;
-        right: -11px;
+        top: 167%;
+        right: 0px;
         z-index: 1;
-        width: 80%;
+        width: 66%;
+    
+    }
+    .header__sale-text {
+        position: absolute;
+        font-size: 20px;
+        font-family: "Gotham pro bold";
+        bottom: -142%;
+        right: 2px;
+        transform: rotate(-30deg);
+        color: #fff;
+        z-index: 10;
     }
     .advantage__text {
         font-size: 15px;
@@ -525,6 +539,7 @@ line-height: 32px;
         left: 0px;
         width: 50px;
     }
+    .price{padding-top: 20px;}
     .timer{
         margin-left: 3%;
     }
