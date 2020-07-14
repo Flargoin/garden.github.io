@@ -14,10 +14,11 @@
 body{
     font-family:Gotham pro;
     background-color: #f0f3ee;
+    
 }
 .container{
     position: relative;
-    max-width: 460px;
+    max-width: 480px;
     margin: 0 auto;
 }
 .header__info{
@@ -26,6 +27,7 @@ body{
     padding-top: 14px;
     margin-bottom: -7px;
         height: 70px;
+        background-color: #fff;
 }
 .advantages{
     display: flex;
@@ -57,9 +59,10 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 77vh;
-    min-width: 470px;
+    height: 75vh;
+    max-width: 480px;
     padding-left: 0;
+    margin: 0 auto;
 }
 .header__promo-green{
     position: absolute;
@@ -68,38 +71,50 @@ body{
 }
 .header__promo-inst{
     position: absolute;
- left:-10px;
- top: 47px;
+ left:0px;
+ top: 50px;
  z-index: 2;
 }
 .header__promo-recommendation{
     position: absolute;
-    bottom: -218%;
-    right: 18%;
+    bottom: -215%;
+    right: 19%;
 }
 .header__promo-shadow{
     position: absolute;
-    top: -70px;
-    left: -3%;
-    z-index: 1;
+top: -66px;
+left: 0;
+z-index: 1;
 }
 .header__promo-sale{
    position: absolute;
-   top: 271%;
+   top: 265%;
 right: -11px;
 z-index: 1;
+width: 60%;
+
 }
-.header__promo-sale:{
+.header__sale-text{
+    position: absolute;
+    font-size: 26px;
+    font-family: "Gotham pro bold";
+    bottom:-265%;
+    right: 8px;
+    transform: rotate(-30deg);
+    color:#fff;
+    z-index: 10;
+}
+.header__promo-sale{
     content:'';
 }
 .header__promo-title{
     font-family: "Gotham pro bold";
     color: #d35728;
     font-size: 44px;
-    padding-top: 24px;
+    padding-top: 26px;
     padding-right: 0;
     margin: 0;
-    margin-left: 5px;
+    margin-left: 16px;
 }
 .header__promo-text{
     font-size: 26px;
@@ -108,7 +123,7 @@ z-index: 1;
     font-family: "Gotham pro bold";
     margin: 0;
     margin-top: 5px;
-margin-left: 10px;
+margin-left: 19px;
 line-height: 32px;
 }
 .advantages__info{
@@ -116,15 +131,22 @@ line-height: 32px;
     z-index: 10;
     background-color: #ffffff;
     padding-top: 30px;
+    padding-bottom: 1px;
 }
 .advantage__item{
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    padding-left: 20px;
+    padding-left: 33px;
+    font-family: "Gotham pro";
 }
 .advantage-icon{
     margin-right: 27px;
+}
+.advantage-icon::after{
+    content: '';
+    background-color: #f1f1f1;
+    height: 50px;
 }
 .advantage__text{
     font-size: 18px;
@@ -137,7 +159,7 @@ line-height: 32px;
     font-family: "Gotham pro";
     padding: 3px 6px;
     border-radius: 10px;
-    
+    margin-right: 12px;
 }
 .count{
     display: flex;
@@ -145,20 +167,40 @@ line-height: 32px;
     justify-content: center;
     padding-top: 26px;
     margin-bottom: 27px;
+    font-size: 18px;
 }
 .action__timer-title{
     text-align: center;
     font-size: 18px;
 }
-
-
+.count__action-title{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.arrow{
+    position:absolute;
+    right: 30px;
+    top: 70px;
+}
+.green2{
+    position: absolute;
+    right: 10px;
+    top: -40px;
+    z-index: 12;
+}
+.green3{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
 
 
 	
  
 .timer-box {
 	min-width: 480px;
-	padding-top: 27px;
+	padding-top: 12px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -169,17 +211,19 @@ line-height: 32px;
 .timer {
 	width: 338px;
 	height: 70px;
-    margin: 0 auto 5px;
+    margin: 0 auto;
+    margin-left:17%;
 }
 	.timer li {
-		width: 77px;
-        height: 77px;
+		width: 75px;
+        height: 60px;
         background-color: #fff;
         border-radius: 15px;
 		font-size: 36px;
-		line-height: 78px;
+		line-height: 30px;
 		float: left;
-		position: relative;
+        position: relative;
+        padding-top: 20px;
         padding-left: 3px;
         list-style: none;
         color: #426b23;
@@ -191,27 +235,34 @@ line-height: 32px;
 		display: block;
         font-size: 50px;
         color: #787977;
-		line-height: 70px;
+		line-height: 80px;
 		content: ':';
 		position: absolute;
-		left: -22px; 
+		left: -33px; 
 		top: 0;
 	}
 .time-name {
     margin: 0 auto;
     list-style: none;
     color:#000;
+    position: relative;
+    z-index: 99;
+    display: block;
+    font-size: 12px;
+    font-family: "Gotham pro";
 }
 	.time-name li {
-		width: 85px;
+		width:px;
 		font-size: 12px;
-		color: #888;
+		color: #000;
 		text-align: center;
 		float: left;
 	}
-.timer li + li,
-.time-name li + li {
-	margin-left: 46px;
+.timer li + li{
+	margin-left: 50px;
+}
+.time-name li {
+    margin-left: 50px;
 }
 .price{
         background-image: url(../img/png/button.jpg);
@@ -224,21 +275,28 @@ line-height: 32px;
         padding-right: 20px;
         padding-top: 15px;
         height: 70px;
-        border-radius: 20px;
+        border-radius: 10px;
 }
 .first{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.first__price{
+    font-size: 14px;
+}
 .price__number{
-    font-size: 36px;  
+    font-size: 36px;
+    float: right;  
 }
 .action__price{
     color: #fff;
+    font-family: "Gotham pro";
+    font-size: 14px;
 }
 .action-price__number{
     font-family: "Gotham pro bold";
+    font-size: 36px; 
 }
 .buy__button{
     background-image: url(../img/png/BUY.jpg);
@@ -246,9 +304,297 @@ line-height: 32px;
         background-repeat: no-repeat;
         background-size: cover;
         border:none;
+        display: block;
         font-size: 26px;
         font-family: "Gotham pro bold";
         color:#fff;
         width: 400px;
-        padding: 12px 30px;
+        height: 85px;
+        margin: 0 auto;
+        margin-top: 21px;
+        border-radius: 10px;
+        text-decoration: none;
+        
 }
+.buy{
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+}
+.marketing{
+   
+    margin-top: 30px;
+    padding-top: 30px;
+    background-color: #ffffff;
+    font-family: "Gotham pro bold";
+    
+}
+.marekting__title{
+    display: block;
+     width: 400px;
+     text-align: center;
+     margin: 0 auto;
+     font-size: 32px;
+     font-family: "Gotham pro bold";
+     color:#c0401d;
+     margin-bottom: 28px;
+    }
+    .marketing__img{
+        position: relative;
+        display: block;
+        width: 440px;
+        margin: 0 auto;
+    }
+    .cancel__img{
+        position: absolute;
+        top: 36.5%;
+        left: 30%;
+        background-image: url(../img/png/cancel.png);
+        width: 175px;
+        height: 160px;
+    }
+    .marketing__items{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+    .marketing__item-img{
+        position: relative;
+        margin-bottom: 25px;
+    }
+    .marketing__item-text{
+        max-width: 208px;
+        line-height: 24px;
+    }
+    .cancel1{
+        background-image: url(../img/png/cancer.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 53%;
+        left: 22%;
+        z-index: 11;
+    }
+    .cancel2{
+        background-image: url(../img/png/cancer.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        z-index: 11;
+    }
+    .cancel3{
+        background-image: url(../img/png/cancer.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 65%;
+        left: 22%;
+        z-index: 11;
+    }
+    .cancel4{
+        background-image: url(../img/png/cancer.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 65%;
+        right: 20%;
+        z-index: 11;
+    }
+    .marketing__item{
+        width: 200px;
+        font-family: "Gotham pro"; 
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .best{
+        background-color: #fff;
+        margin: 0 auto;
+    }
+    .best__title{
+
+        background-image: url(../img/png/title.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 25px 85px 20px 20px;
+        margin: 0 auto;
+        padding-left: 40px;
+        color:#fff;
+        margin-bottom: 80px;
+    }
+    .best__bold{
+        display: block;
+        font-size: 28px;
+        width: 300px;
+        margin-bottom: 15px;
+    }
+.best__img{
+    position: absolute;
+    top: 73%;
+    left: 74%;
+}
+.best__arrow{
+    position: absolute;
+    right: 20px;
+    top: 83.5%;
+    transform: rotate(20deg);
+}
+.best__gif{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    width: 338px;
+}
+.best__text{
+    font-size: 18px;
+    text-align: center;
+}
+.best__descr{
+    color:#c0401d;
+    font-family: "Gotham pro bold";
+}
+.best__text{
+    width: 340px;
+    margin: 0 auto;
+} 
+
+
+
+
+
+@media (max-width:360px){
+    .container{
+        max-width:360px;
+    }
+    .advantages{
+        font-size: 11px;
+    }
+    .header__promo-inst {
+        position: absolute;
+        left: -95px;
+        top: 65px;
+        z-index: 2;
+    }
+    .header__promo-shadow {
+        position: absolute;
+        top: -56px;
+        left: -100px;
+        z-index: 1;
+    }
+    .header__promo-recommendation {
+        position: absolute;
+        bottom: -220%;
+        right: 20%;
+    }
+    .header__promo-sale {
+        position: absolute;
+        top: 265%;
+        right: -11px;
+        z-index: 1;
+        width: 80%;
+    }
+    .advantage__text {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    .green2 {
+        position: absolute;
+        right: 10px;
+        top: -30px;
+        z-index: 12;
+        width: 60px;
+    }
+    .green3{
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 50px;
+    }
+    .timer{
+        margin-left: 3%;
+    }
+    .arrow {
+        position: absolute;
+        right: 2px;
+        top: 50px;
+        width: 30px;
+    }
+    .first__price{
+        font-size: 11px;
+    }
+    .price__number {
+        font-size: 29px;
+    }
+    .action__price {
+        font-size: 11px;
+    }
+    .action-price__number {
+        font-size: 29px;
+    }
+    .buy__button{
+        font-size: 18px;
+        width: 285px;
+        height: 80px;
+    }
+    .marekting__title{
+        font-size: 28px;
+        width: 340px;
+    }
+    .marketing__img{
+        width: 340px;
+    }
+    .cancel__img{
+        top: 27%;
+        left: 27%;
+    }
+    .cancel1{
+        top: 38.4%;
+        left: 45%;
+    }
+    .cancel2{
+        top: 50.4%;
+        right: 45%;
+    }
+    .cancel3{
+        top: 62.4%;
+        left: 45%;
+    }
+    .cancel4{
+        top: 72.7%;
+    right: 45%;
+    }
+    .best__title{
+        font-size: 16px;
+    }
+    .best__bold{
+        font-size: 22px;
+    }
+    .best__img {
+        position: absolute;
+        top: 79%;
+        left: 76%;
+        width: 80px;
+    }
+    .best__arrow {
+        position: absolute;
+        right: 4px;
+        top: 85.5%;
+        transform: rotate(20deg);
+        width: 30px;
+    }
+} 
